@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <link rel="canonical" href="https://www.shwapnarhutbazaar.com/" />
-  <link rel="icon" type="image/png" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>স্বপ্নের হাট বাজার - প্রিমিয়াম জাফরানি সেরেলাক</title>
 
-<!-- ====== GTM HEAD - আপনার GTM ID এখানে বসান ====== -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+<!-- ====== GTM HEAD ====== -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PFCZ77JV');</script>
 <!-- ====== GTM HEAD END ====== -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -782,6 +780,9 @@ footer .links a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
+<!-- ====== GTM BODY ====== -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFCZ77JV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- ====== GTM BODY END ====== -->
 
 <!-- ====== GTM BODY - আপনার GTM ID এখানে বসান ====== -->
 <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
@@ -1387,7 +1388,7 @@ function toggleFaq(el) {
 // ║  Sheet পাওয়ার পর: YOUR_GOOGLE_APPS_SCRIPT_URL_HERE             ║
 // ║  এর জায়গায় আপনার আসল URL টি দিন                               ║
 // ╚══════════════════════════════════════════════════════════════════╝
-var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxPFKCunw-TWLFQO9oKgoAsoJYPL4lvd7PfYaJRziXjg1rQ6gs1gme_q5ACb5JQS2CtMg/exec';
+var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbywRcP0EXRlB0pI3VnujkZG2u7udfnO91vOOJg9GIOoao35tnzGC1GrkAmLkozgJwzJQg/exec';
 
 // ======= Google Apps Script কোড (Sheet এ paste করুন) =======
 // Google Sheet → Extensions → Apps Script → নিচের কোড paste করুন:
@@ -1397,7 +1398,7 @@ function doPost(e) {
   var data = JSON.parse(e.postData.contents);
   // Header row যদি না থাকে তাহলে তৈরি করো
   if(sheet.getLastRow() === 0) {
-    sheet.appendRow(['Date', 'Order-ID', 'Name', 'Phone', 'Address', 'Qty', 'Amount', 'E-mail', 'Status']);
+    sheet.appendRow(['তারিখ ও সময়', 'অর্ডার আইডি', 'নাম', 'মোবাইল', 'ঠিকানা', 'পরিমাণ (টি)', 'মোট টাকা (৳)', 'ইমেইল', 'স্ট্যাটাস']);
     sheet.getRange(1,1,1,9).setBackground('#1a3c2e').setFontColor('white').setFontWeight('bold');
   }
   sheet.appendRow([
